@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float jumpForce = 10;
-
-    public bool isOnGround = true;
+    public bool isOnGround = false;
 
     private Rigidbody2D _playerRB;
 
@@ -18,18 +17,15 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    //Jumping
     {
         if(Input.GetKeyDown(KeyCode.Z) && isOnGround)
         {
-            //AddForce increases the object's force
             _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
         }
-        
     }
-    //If the player touches the ground it will change to True
-    private void OnCollisionEnter2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Ground"))
         {
