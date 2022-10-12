@@ -8,8 +8,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject obstaclePrefab;
     //Obstacle Spawn Pos
     private Vector3 _spawnPos = new Vector3(9, -3, 0);
-    private float _startDelay = 2;
-    private float _repeatRate = 2;
+    private float _startDelay = 0.5f;
+    private float _repeatRate = 1;
 
     // Start is called before the first frame update
     void Start()
