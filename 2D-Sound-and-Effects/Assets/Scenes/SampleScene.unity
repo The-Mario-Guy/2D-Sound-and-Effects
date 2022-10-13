@@ -500,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516333335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.859, y: -3.547, z: 0}
+  m_LocalPosition: {x: -2.859, y: -3.55, z: 0}
   m_LocalScale: {x: 1.3859586, y: 1.3859586, z: 1.3859586}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 1787048001}
   - component: {fileID: 1787048000}
   - component: {fileID: 1787048002}
+  - component: {fileID: 1787048003}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -699,6 +700,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.81417, y: 1.603533}
   m_EdgeRadius: 0
+--- !u!95 &1787048003
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787047999}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60eedeeabc963e041b19de0cc5238901, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1864855280
 GameObject:
   m_ObjectHideFlags: 0
