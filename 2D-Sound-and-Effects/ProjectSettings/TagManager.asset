@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1198865189
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obsticles
+    uniqueID: 4242750895
+    locked: 0
+  - name: Ground
+    uniqueID: 507463349
+    locked: 0
+  - name: Player
+    uniqueID: 2574299321
     locked: 0

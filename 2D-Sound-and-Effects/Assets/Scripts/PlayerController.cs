@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float jumpForce = 10;
     public bool isOnGround = false;
+    
+    public bool isGameOver = false;
 
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
@@ -20,7 +22,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z) && isOnGround)
+        //&& is "and" ! is oppisite so game over needs to be false to jump
+        if(Input.GetKeyDown(KeyCode.Z) && isOnGround && !isGameOver)
         {
             _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
@@ -36,6 +39,11 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             //Lets the game know to switch to the "Walk" Animation
             _playerAnim.SetBool("IsOnGround", isOnGround);
+        }
+        else if(other.gameObject.CompareTag("Obstacle"))
+        {
+            isGameOver = true;
+            _playerAnim.SetBool("IsGameOver", isGameOver);
         }
     }
 }
