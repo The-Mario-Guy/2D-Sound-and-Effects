@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         else if(other.gameObject.CompareTag("Obstacle"))
         {
             isGameOver = true;
-            _playerAnim.SetBool("IsGameOver", isGameOver);
+            _playerAnim.SetTrigger("IsGameOver");
         }
     }
 }
