@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             //Lets the game know to switch to the "Walk" Animation
             _playerAnim.SetBool("IsOnGround", isOnGround);
-            _playerAudio.PlayOneShot(Land, 1);
+            
         }
         else if(other.gameObject.CompareTag("Obstacle"))
         {
