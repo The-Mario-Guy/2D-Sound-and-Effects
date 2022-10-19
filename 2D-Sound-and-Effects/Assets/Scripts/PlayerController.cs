@@ -9,14 +9,20 @@ public class PlayerController : MonoBehaviour
     
     public bool isGameOver = false;
 
+    public AudioClip jumpSound;
+    public AudioClip deadSound;
+    public AudioClip landSound;
+
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
+    private AudioSource _playerAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         _playerRB = GetComponent<Rigidbody2D>();
         _playerAnim = GetComponent<Animator>();
+        _playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +35,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = false;
             //Lets the game know to switch to the "Jump" Animation
             _playerAnim.SetBool("IsOnGround", isOnGround);
+            _playerAudio.PlayOneShot(jumpSound, 1);
         }
     }
 
@@ -39,11 +46,13 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             //Lets the game know to switch to the "Walk" Animation
             _playerAnim.SetBool("IsOnGround", isOnGround);
+            _playerAudio.PlayOneShot(landSound, 1);
         }
         else if(other.gameObject.CompareTag("Obstacle"))
         {
             isGameOver = true;
             _playerAnim.SetTrigger("IsGameOver");
+            _playerAudio.PlayOneShot(deadSound, 1);
         }
     }
 }
