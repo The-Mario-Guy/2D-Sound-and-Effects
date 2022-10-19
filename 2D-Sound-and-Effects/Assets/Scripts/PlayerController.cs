@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip Jump;
     public AudioClip Dead;
-    public AudioClip Land;
 
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
