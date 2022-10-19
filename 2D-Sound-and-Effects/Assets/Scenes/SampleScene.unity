@@ -534,7 +534,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a0cf0bb2d90c5064586fe7c2ca3aab12, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.201
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -991,9 +991,8 @@ MonoBehaviour:
   jumpForce: 20
   isOnGround: 1
   isGameOver: 0
-  jumpSound: {fileID: 8300000, guid: 1e32085876ab0d341a3602db5bc59e20, type: 3}
-  deadSound: {fileID: 8300000, guid: 7d568da29c984cb46875025170a680dc, type: 3}
-  landSound: {fileID: 8300000, guid: 5d860a43652e53941acf55c510f0462f, type: 3}
+  Jump: {fileID: 8300000, guid: 1e32085876ab0d341a3602db5bc59e20, type: 3}
+  Dead: {fileID: 8300000, guid: 7d568da29c984cb46875025170a680dc, type: 3}
 --- !u!50 &1516333339
 Rigidbody2D:
   serializedVersion: 4
